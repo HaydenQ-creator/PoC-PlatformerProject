@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1vbhuy5bidwg"
-path.s3tc="res://.godot/imported/bed_2.png-d0a8b8f77cfa6c7897799b0ecb444030.s3tc.ctex"
+uid="uid://cpovvqtjoaxw7"
+path.s3tc="res://.godot/imported/desk_low-poly_0.jpg-4f739629629a51f257aecff5ef60f6ae.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "1a5f93b91e26fc6cca3bd9c7718efa18"
+"md5": "589968f6726897aca209a5bbddb619b0"
 }
 
 [deps]
 
-source_file="res://Bed/bed_2.png"
-dest_files=["res://.godot/imported/bed_2.png-d0a8b8f77cfa6c7897799b0ecb444030.s3tc.ctex"]
+source_file="res://Models/Desk/desk_low-poly_0.jpg"
+dest_files=["res://.godot/imported/desk_low-poly_0.jpg-4f739629629a51f257aecff5ef60f6ae.s3tc.ctex"]
 
 [params]
 
@@ -23,12 +23,12 @@ compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
-compress/normal_map=1
+compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
-roughness/mode=1
-roughness/src_normal="res://Bed/bed_2.png"
+roughness/mode=0
+roughness/src_normal=""
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false

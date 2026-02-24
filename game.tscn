@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://c1v3hgld4dgpl"]
+[gd_scene load_steps=0 format=3 uid="uid://c1v3hgld4dgpl"]
 
 [ext_resource type="PackedScene" uid="uid://cuvuok6wduokb" path="res://BedRoom/Floor.glb" id="1_vef74"]
 [ext_resource type="PackedScene" uid="uid://b78bdwy3l0clt" path="res://BedRoom/Hall.glb" id="2_hve3p"]
