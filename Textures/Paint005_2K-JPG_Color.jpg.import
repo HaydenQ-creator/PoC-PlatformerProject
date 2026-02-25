@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dqonphibu0fes"
-path.s3tc="res://.godot/imported/Fabric063_2K-JPG_Color.jpg-e2149fcf1316ba80008b16c139f10257.s3tc.ctex"
+uid="uid://b5rynroolm1js"
+path.s3tc="res://.godot/imported/Paint005_2K-JPG_Color.jpg-3797e3d3fed677845f8c4dc512543cf1.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Textures/Fabric063_2K-JPG_Color.jpg"
-dest_files=["res://.godot/imported/Fabric063_2K-JPG_Color.jpg-e2149fcf1316ba80008b16c139f10257.s3tc.ctex"]
+source_file="res://Textures/Paint005_2K-JPG_Color.jpg"
+dest_files=["res://.godot/imported/Paint005_2K-JPG_Color.jpg-3797e3d3fed677845f8c4dc512543cf1.s3tc.ctex"]
 
 [params]
 
