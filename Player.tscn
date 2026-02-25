@@ -1,55 +1,119 @@
-[gd_scene format=3 uid="uid://d2l2q1r4wk3y5"]
+[gd_scene load_steps=23 format=3 uid="uid://d2l2q1r4wk3y5"]
 
-[ext_resource type="Texture2D" uid="uid://wlmdo20vhb2x" path="res://Assets/sprites/knight.png" id="1_a202f"]
+[ext_resource type="PackedScene" uid="uid://cuvuok6wduokb" path="res://BedRoom/Floor.glb" id="2_e80uo"]
+[ext_resource type="PackedScene" uid="uid://b78bdwy3l0clt" path="res://BedRoom/Hall.glb" id="3_cxr5p"]
+[ext_resource type="PackedScene" uid="uid://tx1ydp1fd05h" path="res://BedRoom/Back_Walls.glb" id="4_3tkgg"]
+[ext_resource type="PackedScene" uid="uid://e2gtid6c4un" path="res://BedRoom/SideWalls.glb" id="4_tdg3f"]
+[ext_resource type="PackedScene" uid="uid://v355tes3kxgm" path="res://BedRoom/doorFrame.glb" id="5_l6ohk"]
+[ext_resource type="PackedScene" uid="uid://ck7a6wbnwka2q" path="res://BedRoom/door.glb" id="6_oudfo"]
+[ext_resource type="PackedScene" uid="uid://cl71brkqolm3y" path="res://Bed/bed.glb" id="7_d6rpx"]
+[ext_resource type="Texture2D" uid="uid://c6rfxxsf8hdl2" path="res://Textures/WoodFloor041_2K-JPG_Color.jpg" id="8_r3kul"]
+[ext_resource type="Texture2D" uid="uid://beg4gcmrobm2a" path="res://Textures/8k/Fabric066_8K-PNG_Color.png" id="9_l6ohk"]
+[ext_resource type="PackedScene" uid="uid://c354pvme1mxld" path="res://Models/Desk/desk_low-poly.glb" id="10_rv870"]
+[ext_resource type="PackedScene" uid="uid://dgk1kl106qx2w" path="res://Models/Office_Chair/office_chair.glb" id="11_efikj"]
+[ext_resource type="Script" uid="uid://yfm253l7f3ol" path="res://camera_3d.gd" id="12_oudfo"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_a202f"]
-radius = 8.062258
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d6rpx"]
+albedo_texture = ExtResource("8_r3kul")
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_noarx"]
-atlas = ExtResource("1_a202f")
-region = Rect2(0, 0, 32, 32)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r3kul"]
+albedo_texture = ExtResource("9_l6ohk")
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_a0tk4"]
-atlas = ExtResource("1_a202f")
-region = Rect2(32, 0, 32, 32)
+[sub_resource type="PlaneMesh" id="PlaneMesh_cgsek"]
+material = SubResource("StandardMaterial3D_r3kul")
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_r3fl7"]
-atlas = ExtResource("1_a202f")
-region = Rect2(64, 0, 32, 32)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jatw7"]
+albedo_texture = ExtResource("9_l6ohk")
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_jka67"]
-atlas = ExtResource("1_a202f")
-region = Rect2(96, 0, 32, 32)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rv870"]
+albedo_texture = ExtResource("9_l6ohk")
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_i5arm"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_noarx")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_a0tk4")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_r3fl7")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_jka67")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_efikj"]
+albedo_texture = ExtResource("9_l6ohk")
 
-[node name="Node2D" type="Node2D" unique_id=658827917]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_itxgx"]
+albedo_texture = ExtResource("9_l6ohk")
 
-[node name="Player" type="CharacterBody2D" parent="." unique_id=1141825628]
-position = Vector2(0, -13)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cgsek"]
+albedo_texture = ExtResource("9_l6ohk")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=400391510]
-position = Vector2(0, 4)
-shape = SubResource("CircleShape2D_a202f")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0pi4m"]
+albedo_texture = ExtResource("9_l6ohk")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player" unique_id=1883937503]
-sprite_frames = SubResource("SpriteFrames_i5arm")
-frame_progress = 0.27722824
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sg6sq"]
+albedo_texture = ExtResource("9_l6ohk")
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Floor" parent="." instance=ExtResource("2_e80uo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.2564, -0.0754087, -1.53278)
+
+[node name="Hall" parent="." instance=ExtResource("3_cxr5p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.1269, 0, -1.48612)
+
+[node name="SideWalls" parent="." instance=ExtResource("4_tdg3f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.7789, 0, -1.22453)
+
+[node name="Back_Walls" parent="." instance=ExtResource("4_3tkgg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.8336, -0.00819206, -1.26388)
+
+[node name="doorFrame" parent="." instance=ExtResource("5_l6ohk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.5662, 0.0246925, -1.30635)
+
+[node name="door" parent="." instance=ExtResource("6_oudfo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.4621, 0, 7.7013)
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("7_d6rpx")]
+transform = Transform3D(7.7138, 0, 0, 0, 3.64692, 0, 0, 0, 6.61419, -45.4376, 0.537452, -1.96542)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(19.9639, 0, 0, 0, 1, 0, 0, 0, 14.3693, -34.7923, 0.431936, -1.33449)
+material_override = SubResource("StandardMaterial3D_d6rpx")
+mesh = SubResource("PlaneMesh_cgsek")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(19.9639, 0, 0, 0, -4.37114e-08, -8.33939, 0, 1, -3.64526e-07, -35.7613, 7.75855, -14.6858)
+material_override = SubResource("StandardMaterial3D_jatw7")
+mesh = SubResource("PlaneMesh_cgsek")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(-19.9639, 8.74228e-08, -3.18679e-14, 0, -4.37114e-08, -8.33939, -1.7453e-06, -1, 3.64526e-07, -35.7618, 7.94082, 12.2199)
+material_override = SubResource("StandardMaterial3D_rv870")
+mesh = SubResource("PlaneMesh_cgsek")
+
+[node name="Sketchfab_Scene2" parent="." instance=ExtResource("10_rv870")]
+transform = Transform3D(-0.00214629, 0, -0.022496, 0, 0.0244891, 0, 0.0237491, 0, -0.00203305, -24.4407, 0.178329, -11.4285)
+
+[node name="Sketchfab_Scene3" parent="." instance=ExtResource("11_efikj")]
+transform = Transform3D(-0.0254041, 0, 0.0566999, 0, 0.0658449, 0, -0.0630832, 0, -0.0228334, -17.9595, 1.30609, -10.5194)
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
+transform = Transform3D(2.38067e-07, -1, 3.64526e-07, 0, -4.37114e-08, -8.33939, 19.9639, 1.19249e-08, -4.34693e-15, -17.0743, 7.68182, -14.4906)
+material_override = SubResource("StandardMaterial3D_efikj")
+mesh = SubResource("PlaneMesh_cgsek")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="."]
+transform = Transform3D(2.38067e-07, -1, 3.64526e-07, 0, -4.37114e-08, -8.33939, 19.9639, 1.19249e-08, -4.34693e-15, -17.0743, 22.4671, -1.13787)
+material_override = SubResource("StandardMaterial3D_itxgx")
+mesh = SubResource("PlaneMesh_cgsek")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="."]
+transform = Transform3D(2.38067e-07, 1, -3.64526e-07, 0, -4.37114e-08, -8.33939, -19.9639, 1.19249e-08, -4.34693e-15, -53.9716, 7.846, 23.0012)
+material_override = SubResource("StandardMaterial3D_cgsek")
+mesh = SubResource("PlaneMesh_cgsek")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="."]
+transform = Transform3D(2.38067e-07, 1, -3.64526e-07, 0, -4.37114e-08, -8.33939, -19.9639, 1.19249e-08, -4.34693e-15, -53.9716, 7.846, -25.8376)
+material_override = SubResource("StandardMaterial3D_0pi4m")
+mesh = SubResource("PlaneMesh_cgsek")
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="."]
+transform = Transform3D(2.38067e-07, 1, -3.64526e-07, 0, -4.37114e-08, -8.33939, -19.9639, 1.19249e-08, -4.34693e-15, -53.9716, 23.4465, -1.66029)
+material_override = SubResource("StandardMaterial3D_sg6sq")
+mesh = SubResource("PlaneMesh_cgsek")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.0175092, -0.362862, -0.931678, -0.0125951, 0.931667, -0.363094, 0.999767, 0.0180922, 0.0117424, -51.5838, 6.6543, -1.43339)
+doppler_tracking = 2
+current = true
+script = ExtResource("12_oudfo")
