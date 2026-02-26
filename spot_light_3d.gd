@@ -1,10 +1,14 @@
-extends Node3D # or whatever node holds the script
+extends Node3D
 
-# Reference the SpotLight3D node. Adjust the path "$SpotLight3D" if necessary.
-@onready var light = $SpotLight3D
+# Using @onready ensures the node is loaded before the script tries to find it.
+# Make sure "SpotLight3D" matches the exact name in your Scene Tree.
+@onready var light: SpotLight3D = $SpotLight3D
 
-func _input(event): 
-	# Check if the "ui_interact" action is pressed
+func _input(event: InputEvent) -> void: 
+	# 1. Check for the action
 	if event.is_action_pressed("ui_interact"):
-		# Toggle visibility: if it's true, make it false; if false, make it true.
-		light.visible = !light.visible
+		# 2. Safety check: ensure the light wasn't deleted or renamed
+		if light:
+			light.visible = !light.visible
+		else:
+			push_error("SpotLight3D node not found! Check your scene tree names.")
