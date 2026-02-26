@@ -1,14 +1,14 @@
 [gd_scene load_steps=0 format=3 uid="uid://c1v3hgld4dgpl"]
 
-[ext_resource type="PackedScene" uid="uid://cuvuok6wduokb" path="res://BedRoom/Floor.glb" id="1_vef74"]
-[ext_resource type="PackedScene" uid="uid://b78bdwy3l0clt" path="res://BedRoom/Hall.glb" id="2_hve3p"]
-[ext_resource type="PackedScene" uid="uid://tx1ydp1fd05h" path="res://BedRoom/Back_Walls.glb" id="3_mfdv2"]
-[ext_resource type="PackedScene" uid="uid://cl71brkqolm3y" path="res://Bed/bed.glb" id="4_iotsf"]
-[ext_resource type="PackedScene" uid="uid://e2gtid6c4un" path="res://BedRoom/SideWalls.glb" id="5_lc2xo"]
-[ext_resource type="PackedScene" uid="uid://v355tes3kxgm" path="res://BedRoom/doorFrame.glb" id="6_215e1"]
-[ext_resource type="PackedScene" uid="uid://ck7a6wbnwka2q" path="res://BedRoom/door.glb" id="7_7sc4i"]
-[ext_resource type="Texture2D" uid="uid://c6rfxxsf8hdl2" path="res://Textures/WoodFloor041_2K-JPG_Color.jpg" id="8_80cx4"]
-[ext_resource type="Texture2D" uid="uid://dqonphibu0fes" path="res://Textures/Fabric063_2K-JPG_Color.jpg" id="9_e8heu"]
+[ext_resource type="PackedScene" uid="uid://cuvuok6wduokb" path="res://3D/BedRoom/Floor.glb" id="1_vef74"]
+[ext_resource type="PackedScene" uid="uid://b78bdwy3l0clt" path="res://3D/BedRoom/Hall.glb" id="2_hve3p"]
+[ext_resource type="PackedScene" uid="uid://tx1ydp1fd05h" path="res://3D/BedRoom/Back_Walls.glb" id="3_mfdv2"]
+[ext_resource type="PackedScene" uid="uid://cl71brkqolm3y" path="res://3D/Bed/bed.glb" id="4_iotsf"]
+[ext_resource type="PackedScene" uid="uid://e2gtid6c4un" path="res://3D/BedRoom/SideWalls.glb" id="5_lc2xo"]
+[ext_resource type="PackedScene" uid="uid://v355tes3kxgm" path="res://3D/BedRoom/doorFrame.glb" id="6_215e1"]
+[ext_resource type="PackedScene" uid="uid://ck7a6wbnwka2q" path="res://3D/BedRoom/door.glb" id="7_7sc4i"]
+[ext_resource type="Texture2D" uid="uid://c6rfxxsf8hdl2" path="res://3D/Textures/WoodFloor041_2K-JPG_Color.jpg" id="8_80cx4"]
+[ext_resource type="Texture2D" uid="uid://dqonphibu0fes" path="res://3D/Textures/Fabric063_2K-JPG_Color.jpg" id="9_e8heu"]
 
 [sub_resource type="Gradient" id="Gradient_rvswv"]
 colors = PackedColorArray(0.16086122, 0.13459647, 0.5091749, 1, 0, 0, 0, 1)

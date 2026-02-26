@@ -1,11 +1,11 @@
 extends CharacterBody3D
 @onready var nav = $NavigationAgen3D
 
-const SPEED = 5.0
-
+var SPEED = 5.0
 
 func target_position(target):
 	nav.target_position = target
+	
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.

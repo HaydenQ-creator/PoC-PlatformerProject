@@ -1,6 +1,6 @@
 extends Camera3D
 
-var mouse_sensitivity = 0.001
+var mouse_sensitivity = 0.002
 
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
