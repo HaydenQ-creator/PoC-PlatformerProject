@@ -19,6 +19,7 @@ uv1_scale = Vector3(146.775, 146.775, 146.775)
 [node name="House" unique_id=1782824997 instance=ExtResource("1_6syyc")]
 
 [node name="Cube" parent="." index="0" unique_id=666801214]
+transform = Transform3D(231.31877, 0, 0, 0, 0.16963314, 0, 0, 0, 162.44188, -83.641075, 4.372526, 5.116661)
 surface_material_override/0 = SubResource("StandardMaterial3D_10qhy")
 
 [node name="Cube_001" parent="." index="1" unique_id=93157550]
@@ -56,6 +57,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_2y50f")
 surface_material_override/0 = SubResource("StandardMaterial3D_2y50f")
 
 [node name="Cube_012" parent="." index="12" unique_id=82490864]
+transform = Transform3D(0, 0, -0.5312135, 0, 0.6405535, 0, 1.6009728, 0, 0, -286.10324, 28.073254, 69.89531)
 surface_material_override/0 = SubResource("StandardMaterial3D_2y50f")
 
 [node name="Cube_013" parent="." index="13" unique_id=1119353946]

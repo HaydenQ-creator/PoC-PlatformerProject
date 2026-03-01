@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
 var SPEED = 5.0
-const JUMP_VELOCITY = 7.5
+var JUMP_VELOCITY = 7.5
 
 # 1. Get a reference to your camera
 @onready var camera: Camera3D = $Camera3D 
@@ -16,10 +16,9 @@ func _physics_process(delta: float) -> void:
 		velocity.y = JUMP_VELOCITY
 	
 	if Input.is_action_just_pressed("ui_run"):
-		SPEED = 9.0
+		SPEED = 6
 	elif Input.is_action_just_released("ui_run"):
-		SPEED = 5.0
-	
+		SPEED = 5	
 	# Get the input direction
 	var input_dir := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	

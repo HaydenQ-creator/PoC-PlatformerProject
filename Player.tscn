@@ -103,6 +103,8 @@ background_mode = 2
 sky = SubResource("Sky_sg6sq")
 ssr_enabled = true
 ssao_enabled = true
+ssao_radius = 45.5
+ssao_detail = 5.0
 ssil_enabled = true
 sdfgi_enabled = true
 glow_enabled = true
@@ -112,7 +114,7 @@ fog_light_energy = 0.75
 volumetric_fog_enabled = true
 volumetric_fog_density = 0.0191
 volumetric_fog_albedo = Color(0.6052743, 0.6052743, 0.6052743, 1)
-volumetric_fog_emission_energy = 886.5
+volumetric_fog_emission_energy = 1087.55
 volumetric_fog_gi_inject = 2.65
 volumetric_fog_anisotropy = 0.45
 volumetric_fog_length = 5.55
@@ -181,7 +183,7 @@ shape = SubResource("BoxShape3D_rv870")
 debug_color = Color(0.954767, 0.406766, 0, 0.419608)
 
 [node name="BackWalls2" type="CollisionShape3D" parent="NavigationRegion3D/House/StaticBody3D" unique_id=1484379043]
-transform = Transform3D(-5.40197e-07, 1, -4.37114e-08, 0, -4.37114e-08, -1, -12.3583, -4.37114e-08, 1.91068e-15, -311.42, 2.45422, 163.753)
+transform = Transform3D(-5.40197e-07, 1, -4.37114e-08, 0, -4.37114e-08, -1, -12.3583, -4.37114e-08, 1.91068e-15, -284.5276, 2.4542203, 163.753)
 shape = SubResource("BoxShape3D_rv870")
 debug_color = Color(0.954767, 0.406766, 0, 0.419608)
 
@@ -266,7 +268,7 @@ shape = SubResource("BoxShape3D_rv870")
 debug_color = Color(0.954767, 0.406766, 0, 0.419608)
 
 [node name="Ceiling" type="MeshInstance3D" parent="NavigationRegion3D/House" unique_id=491804336]
-transform = Transform3D(1.0704449e-05, 3.319036e-14, 518.7979, 2.4609035e-05, -9.9837265, 0, 184.8813, 5.732455e-07, -1.712049e-05, -101.53385, 51.16183, -2.260925)
+transform = Transform3D(1.0704449e-05, 3.3190356e-14, 518.7979, 2.4609035e-05, -9.9837265, 0, 184.8813, 5.732455e-07, -1.7120488e-05, -101.50486, 51.16183, -1.9096218)
 mesh = SubResource("PlaneMesh_rv870")
 skeleton = NodePath("../../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_2n1s8")
@@ -288,7 +290,7 @@ shape = SubResource("BoxShape3D_efikj")
 [node name="Camera3D" type="Camera3D" parent="Enemy" unique_id=603511262]
 transform = Transform3D(0.9128419, 0, 7.460699e-14, 0, 0.8324524, 0, -4.2632564e-14, 0, 0.8719156, 0, 1.307375, -0.10080915)
 
-[node name="SpotLight3D" type="SpotLight3D" parent="Enemy/Camera3D" unique_id=71762008]
+[node name="EnemyLight" type="SpotLight3D" parent="Enemy/Camera3D" unique_id=71762008]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0079179, 0, -0.00428835)
 light_color = Color(0.660394, 0.995847, 0.999999, 1)
 light_energy = 2.845
@@ -408,7 +410,11 @@ light_energy = 2.845
 light_volumetric_fog_energy = 16.0
 light_size = 1.0
 shadow_enabled = true
+shadow_bias = 1.102
 distance_fade_enabled = true
+distance_fade_begin = 0.0
+distance_fade_shadow = 3715.75
+distance_fade_length = 167.1
 spot_range = 104.8
 spot_angle = 37.7199
 script = ExtResource("19_sg6sq")
