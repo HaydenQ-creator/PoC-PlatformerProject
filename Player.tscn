@@ -1,55 +1,47 @@
-[gd_scene format=3 uid="uid://d2l2q1r4wk3y5"]
+[gd_scene load_steps=7 format=3 uid="uid://d2l2q1r4wk3y5"]
 
-[ext_resource type="Texture2D" uid="uid://wlmdo20vhb2x" path="res://Assets/sprites/knight.png" id="1_a202f"]
+[ext_resource type="PackedScene" uid="uid://drwjhv62i44xk" path="res://Tasklist Only/large_flat_plane.tscn" id="1_kne1u"]
+[ext_resource type="Script" uid="uid://bkjhl7d84gscg" path="res://character_body_3d.gd" id="2_e80uo"]
+[ext_resource type="Script" uid="uid://d3ymsdw38kdt8" path="res://camera_3d.gd" id="3_cxr5p"]
+[ext_resource type="PackedScene" uid="uid://cvpf7cxp3jxp4" path="res://Tasklist Only/blocks/block.tscn" id="4_e80uo"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_a202f"]
-radius = 8.062258
+[sub_resource type="Environment" id="Environment_kne1u"]
+ssr_enabled = true
+ssao_enabled = true
+ssil_enabled = true
+sdfgi_enabled = true
+glow_enabled = true
+fog_enabled = true
+volumetric_fog_length = 39.6
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_noarx"]
-atlas = ExtResource("1_a202f")
-region = Rect2(0, 0, 32, 32)
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_tdg3f"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_a0tk4"]
-atlas = ExtResource("1_a202f")
-region = Rect2(32, 0, 32, 32)
+[node name="Node3D" type="Node3D"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_r3fl7"]
-atlas = ExtResource("1_a202f")
-region = Rect2(64, 0, 32, 32)
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_kne1u")
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_jka67"]
-atlas = ExtResource("1_a202f")
-region = Rect2(96, 0, 32, 32)
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866025, -0.5, -2.18557e-08, 0, -4.37114e-08, 1, -0.5, 0.866025, 3.78552e-08, 0, 0, 0)
+shadow_enabled = true
+directional_shadow_max_distance = 1810.0
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_i5arm"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_noarx")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_a0tk4")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_r3fl7")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_jka67")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
+[node name="largeFlatPlane" parent="." instance=ExtResource("1_kne1u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.706612, -0.628218, 0.203064)
 
-[node name="Node2D" type="Node2D" unique_id=658827917]
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2943, 0)
+script = ExtResource("2_e80uo")
 
-[node name="Player" type="CharacterBody2D" parent="." unique_id=1141825628]
-position = Vector2(0, -13)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+shape = SubResource("CapsuleShape3D_tdg3f")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=400391510]
-position = Vector2(0, 4)
-shape = SubResource("CircleShape2D_a202f")
+[node name="Camera3D" type="Camera3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.58352, 0)
+script = ExtResource("3_cxr5p")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player" unique_id=1883937503]
-sprite_frames = SubResource("SpriteFrames_i5arm")
-frame_progress = 0.27722824
+[node name="Node3D" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.169489, -0.127662, 0.201502)
+
+[node name="block" parent="." instance=ExtResource("4_e80uo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.38708, 1.15187, 15.0846)
