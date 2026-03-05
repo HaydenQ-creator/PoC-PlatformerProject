@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
 var SPEED = 10
-var JUMP_VELOCITY = 10
+var JUMP_VELOCITY = 9
 
 # 1. Get a reference to your camera
 @onready var camera: Camera3D = $Camera3D 
