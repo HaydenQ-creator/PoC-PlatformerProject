@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://3ka4rcgicoq5"]
+
+[ext_resource type="Texture2D" uid="uid://cfs7hwb5pxrpg" path="res://new folder/environment/ground_stone1.png" id="1_nfgk7"]
+
+[node name="GroundStone1" type="Sprite2D"]
+z_index = -1
+scale = Vector2(8.75391, 4.91602)
+texture = ExtResource("1_nfgk7")
