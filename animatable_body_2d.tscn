@@ -6,6 +6,7 @@
 size = Vector2(32, 8)
 
 [node name="platform" type="AnimatableBody2D"]
+position = Vector2(-1, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, 0.25)
