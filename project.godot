@@ -14,10 +14,10 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 
 [application]
 
-config/name="Platformer Project"
+config/name="Survival the Lava"
 run/main_scene="uid://d2l2q1r4wk3y5"
 config/features=PackedStringArray("4.4", "Forward Plus")
-config/icon="uid://c40s4pm32iqjq"
+config/icon="uid://cnfku1w2btq71"
 
 [display]
 
