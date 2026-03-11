@@ -1,14 +1,11 @@
 extends Area3D
 
-var HP = 100
-var Lava = false
+@onready var camera_1 = $"../../Player/Camera3D"
+@onready var camera_2 = $"../../Camera3D2"
+
+
 func _on_body_entered(body : CollisionShape3D):
-	if body.is_in_group("Player"):
-		Lava = true
-		
-func _process(delta: float) -> void:
-	if Lava:
-		HP -= 25 * delta  
-		if HP <= 0:
-			print("no more hp")
-			Lava = false 
+	swap_camera()
+	
+func swap_camera():
+	camera_2.make_current()
