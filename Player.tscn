@@ -1,15 +1,15 @@
 [gd_scene load_steps=15 format=3 uid="uid://d2l2q1r4wk3y5"]
 
 [ext_resource type="PackedScene" uid="uid://drwjhv62i44xk" path="res://Tasklist Only/large_flat_plane.tscn" id="1_kne1u"]
-[ext_resource type="Script" uid="uid://bkxe01vf0uykh" path="res://player.gd" id="1_wi0c6"]
-[ext_resource type="Script" uid="uid://bkjhl7d84gscg" path="res://character_body_3d.gd" id="2_e80uo"]
-[ext_resource type="Script" uid="uid://d3ymsdw38kdt8" path="res://camera_3d.gd" id="3_cxr5p"]
+[ext_resource type="Script" path="res://player.gd" id="1_wi0c6"]
+[ext_resource type="Script" path="res://character_body_3d.gd" id="2_e80uo"]
+[ext_resource type="Script" path="res://camera_3d.gd" id="3_cxr5p"]
 [ext_resource type="PackedScene" uid="uid://cvpf7cxp3jxp4" path="res://Tasklist Only/blocks/block.tscn" id="4_e80uo"]
 [ext_resource type="PackedScene" uid="uid://ejw7lyl7w8of" path="res://mesh_instance_3d.tscn" id="5_cxr5p"]
-[ext_resource type="Script" uid="uid://dbuwgn34v7o5i" path="res://area_3d.gd" id="5_dtqjt"]
-[ext_resource type="Script" uid="uid://dmbtnckwje2s6" path="res://lava.gd" id="5_tdg3f"]
-[ext_resource type="Script" uid="uid://dg8r2pnxujt6u" path="res://collision_shape_3d.gd" id="6_dtqjt"]
-[ext_resource type="Script" uid="uid://kpe3ojfwltym" path="res://camera_3d_2.gd" id="10_hp6x6"]
+[ext_resource type="Script" path="res://area_3d.gd" id="5_dtqjt"]
+[ext_resource type="Script" path="res://lava.gd" id="5_tdg3f"]
+[ext_resource type="Script" path="res://collision_shape_3d.gd" id="6_dtqjt"]
+[ext_resource type="Script" path="res://camera_3d_2.gd" id="10_hp6x6"]
 
 [sub_resource type="Environment" id="Environment_kne1u"]
 ssr_enabled = true

@@ -19,6 +19,11 @@ run/main_scene="uid://d2l2q1r4wk3y5"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="uid://c40s4pm32iqjq"
 
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+
 [dotnet]
 
 project/assembly_name="Platformer Project"
