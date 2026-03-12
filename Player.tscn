@@ -52,6 +52,7 @@ script = ExtResource("2_e80uo")
 
 [node name="Camera3D" type="Camera3D" parent="Player"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.58352, 0)
+fov = 120.0
 script = ExtResource("3_cxr5p")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="Player"]
@@ -253,14 +254,14 @@ transform = Transform3D(0.0641465, -0.168868, -0.995073, -4.66676, -0.0825705, -
 [node name="block15" parent="Blocks" instance=ExtResource("4_e80uo")]
 transform = Transform3D(0.06423, -0.169089, -0.996372, -4.67285, -0.0826782, -0.00314634, -0.331201, 1.1337, -0.148836, -96.0793, 38.4795, -1.50855)
 
-[node name="block11" parent="Blocks" instance=ExtResource("4_e80uo")]
-transform = Transform3D(0.0137097, -0.147134, -0.989022, -0.997404, -0.0719431, -0.00312313, -0.0706937, 0.986497, -0.147738, -64.8764, 22.5274, -6.6826)
-
-[node name="block12" parent="Blocks" instance=ExtResource("4_e80uo")]
-transform = Transform3D(0.0137097, -0.147134, -0.989022, -0.997404, -0.0719431, -0.00312313, -0.0706937, 0.986497, -0.147738, -85.0356, 22.4637, -9.69394)
-
 [node name="block17" parent="Blocks" instance=ExtResource("4_e80uo")]
-transform = Transform3D(0.0137097, -0.147134, -0.989022, -0.997404, -0.0719431, -0.00312313, -0.0706937, 0.986497, -0.147738, -106.815, 22.395, -12.9472)
+transform = Transform3D(0.0641465, -0.168868, -0.995073, -4.66676, -0.0825705, -0.00314224, -0.330769, 1.13222, -0.148642, -54.6753, 39.093, -4.23276)
+
+[node name="block69" parent="Blocks" instance=ExtResource("4_e80uo")]
+transform = Transform3D(0.0641465, -0.168868, -0.995073, -4.66676, -0.0825705, -0.00314224, -0.330769, 1.13222, -0.148642, -75.3024, 38.7874, -7.31399)
+
+[node name="block70" parent="Blocks" instance=ExtResource("4_e80uo")]
+transform = Transform3D(0.06423, -0.169089, -0.996372, -4.67285, -0.0826782, -0.00314634, -0.331201, 1.1337, -0.148836, -96.0793, 38.4795, -10.4176)
 
 [node name="block3" parent="Blocks" instance=ExtResource("4_e80uo")]
 transform = Transform3D(-0.742387, 0.402194, 0.255376, -0.0243142, 0.783063, -0.296197, -0.66953, -0.474398, -0.272409, -31.0905, 10.7699, 36.9199)
