@@ -6,7 +6,7 @@ extends Camera3D
 		enable = value
 		current = value
 
-var mouse_sensitivity = 0.0015 
+var mouse_sensitivity = 0.005
 
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
