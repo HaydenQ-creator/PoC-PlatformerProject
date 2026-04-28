@@ -283,7 +283,7 @@ transform = Transform3D(-0.11849, 0, -0.992955, 0, 1, 0, 0.992955, 0, -0.11849, 
 pixel_size = 0.061
 text = "Yipeee
 You did it
-check if you bounce off lava"
+check if you bounce off lava "
 
 [node name="SpotLight3D4" type="SpotLight3D" parent="Blocks" unique_id=2109892680]
 transform = Transform3D(1.48813e-08, 0.940264, -0.340445, 4.11003e-08, -0.340445, -0.940264, -1, -1.77636e-15, -4.37114e-08, -83.133, -98.1454, 353.51)
@@ -315,9 +315,9 @@ text = "Dang you died
 "
 
 [node name="Label3D5" type="Label3D" parent="Blocks" unique_id=117331310]
-transform = Transform3D(-5.33306e-07, 0, 0.990602, 0, 19.3204, 0, -12.2006, 0, -4.33006e-08, -82.8046, -95.7253, 353.647)
+transform = Transform3D(-8.2104566e-07, 0, 0.990602, 0, 21.021093, 0, -18.783306, 0, -4.33006e-08, -82.8046, -95.7253, 353.647)
 pixel_size = 0.0012
-text = "restart the whole thing to try again"
+text = "Press R to restart"
 
 [node name="Lava" type="StaticBody3D" parent="." unique_id=911619752]
 transform = Transform3D(291.172, 0, 0, 0, 18.8424, 0, 0, 0, 183.462, -0.162437, -3.802, -0.184731)

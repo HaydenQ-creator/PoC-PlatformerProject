@@ -32,6 +32,8 @@ func _physics_process(delta: float) -> void:
 		SPEED = 15
 	elif Input.is_action_just_released("run"):
 		SPEED = 10
+	if Input.is_action_just_pressed("restart"):
+		get_tree().reload_current_scene()
 		
 	var input_dir := Input.get_vector("a", "d", "w", "s")
 	
